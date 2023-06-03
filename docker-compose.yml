@@ -4,7 +4,8 @@ services:
   priv-api-server-nodejs:
     container_name: api-server-nodejs
     #container_name: priv-api-server-nodejs
-    image: priv-api-server-nodejs
+    build:
+      dockerfile: Dockerfile
     restart: unless-stopped
     environment:
       NODE_ENV: ${NODE_ENV}
